@@ -12,7 +12,7 @@ $requestParamList = array();
 $responseParamList = array();
 
 
-$requestParamList = array("MID" => "Jublia80102820918555" , "ORDERID" => "243a4f59c32a1ab7c0dc");  
+$requestParamList = array("MID" => PAYTM_MERCHANT_MID , "ORDERID" => "243a4f59c32a1ab7c0dc");  
 $url = "https://secure.paytm.in/oltp/HANDLER_INTERNAL/TXNSTATUS";
 $data_string = "JsonData=".json_encode($requestParamList);
 

@@ -34,7 +34,7 @@ $paramList["SUBS_FREQUENCY"] = "1";
 $paramList["REQUEST_TYPE"] = "SUBSCRIBE";
 	
 
-$checkSum = getChecksumFromArray($paramList,"eY3gRIYiuq3iyjmu");
+$checkSum = getChecksumFromArray($paramList,PAYTM_MERCHANT_KEY);
 
 ?>
 <html>

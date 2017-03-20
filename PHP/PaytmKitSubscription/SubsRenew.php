@@ -16,7 +16,7 @@ $paramList["ORDER_ID"] = "OrderRenewTest00000000001";
 $paramList["SUBS_ID"] = '1002410';
 $paramList["TXN_AMOUNT"] = '40';
 
-$checkSum = getChecksumFromArray($paramList,'');
+$checkSum = getChecksumFromArray($paramList,PAYTM_MERCHANT_KEY);
 $paramList["CHECKSUMHASH"] = $checkSum;
 
 foreach ( $paramList as $key => $value) 
