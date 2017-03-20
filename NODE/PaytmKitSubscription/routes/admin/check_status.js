@@ -5,7 +5,7 @@ var request = require('request');
 module.exports = function (app) {
 
  app.get('/check_status', function(req,res){
-console.log(" vidisha check status get");
+console.log(" Check status get");
 res.render('check_status.ejs',{'config' : config,'flag': 'false'});
   });
 

@@ -4,7 +4,7 @@ var config = require('../../config/config');
 module.exports = function (app) {
 
  app.get('/subcription', function(req,res){
-console.log("--------testtxnjs----");
+console.log("--------js----");
 res.render('subcription.ejs',{'config' : config});
   });
 

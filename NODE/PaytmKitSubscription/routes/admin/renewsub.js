@@ -5,7 +5,7 @@ var request = require('request');
 module.exports = function (app) {
 
  app.get('/renewsub', function(req,res){
-console.log(" vidisha renew");
+console.log(" Renew");
 console.log("renew starts start ");
         
 var paramList = new Array();
