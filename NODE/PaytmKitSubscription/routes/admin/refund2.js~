@@ -1,0 +1,54 @@
+var checksum = require('../../model/checksum');
+var config = require('../../config/config');
+var http = require('http');
+var request = require('request');
+module.exports = function (app) {
+
+ app.get('/refund2', function(req,res){
+console.log(" vidisha refund dkwjhdghsjdwhsgdget");
+console.log("Refund start ");
+        var paramarray = {};
+
+        paramarray["MID"] = "Yumist99192130407291";
+        paramarray["TXNTYPE"] = "REFUND";
+        paramarray["REFUNDAMOUNT"] = "120";
+        paramarray["ORDER_ID"] = "327194";
+        paramarray["TXNID"] = "6239196684";
+        paramarray["REFID"] = "327194";
+      //console.log(paramarray);
+      var SERVER = "https://secure.paytm.in/oltp/HANDLER_INTERNAL/REFUND?"
+      var finalstring = JSON.stringify(paramarray);
+      paramarray["refund"] = true ;
+ checksum.genchecksum(paramarray,'r0F5V!DBrf&ehny4', function (err, result) 
+        {
+          var reqrefund = JSON.stringify(paramarray);
+           var finalstring = "JsonData=" + JSON.stringify(paramarray);
+           console.log(finalstring);
+            request({
+            url: SERVER, //URL to hit
+            method: 'POST',
+            headers: {
+                    'Content-Type': 'application/json',
+                     },
+            body: finalstring//Set the body as a string
+            }, function(error, response, body){
+            if(error) {
+                console.log(error);
+            } else {
+                //console.log(response.statusCode, body);
+                 var response = JSON.parse(body);
+                 console.log(response);
+                
+            }
+                });
+        });
+        console.log("POST Order end");
+  });
+
+
+  app.post('/refund',function(req, res) {
+        console.log("POST Order end");
+
+ });
+
+};

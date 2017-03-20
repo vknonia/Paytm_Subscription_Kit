@@ -1,0 +1,157 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Merchant Check Out Page</title>
+<meta name="GENERATOR" content="Evrsoft First Page">
+</head>
+<body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+ <script type="text/javascript">
+          $(document).ready(function () {
+              $('#user-submit').click(function () {
+                  alert('Are you sure to submit');
+
+                  });
+              });
+          });
+      </script>
+	<h1>Merchant Check Out Page</h1>
+	<pre>
+	</pre>
+	<form id="form1" method="post" action="#">
+		<table border="1">
+			<tbody>
+				<tr>
+					<th>S.No</th>
+					<th>Label</th>
+					<th>Value</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td><label>ORDER_ID::*</label></td>
+					<td><input id="ORDER_ID" tabindex="1" maxlength="20" size="20"
+						name="ORDER_ID" autocomplete="off"
+						value="ORDS77744dd10">
+					</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td><label>CUSTID ::*</label></td>
+					<td><input id="CUST_ID" tabindex="2" maxlength="12" size="12" name="CUST_ID" autocomplete="off" value="CUST001"></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td><label>INDUSTRY_TYPE_ID ::*</label></td>
+					<td><input id="INDUSTRY_TYPE_ID" tabindex="4" maxlength="12" size="12" name="INDUSTRY_TYPE_ID" autocomplete="off" value='<%= config.INDUSTRY_TYPE_ID %>'></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td><label>Channel ::*</label></td>
+					<td><input id="CHANNEL_ID" tabindex="4" maxlength="12"
+						size="12" name="CHANNEL_ID" autocomplete="off" value='<%= config.CHANNEL_ID %>'>
+					</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td><label>txnAmount*</label></td>
+					<td><input title="TXN_AMOUNT" tabindex="10"
+						type="text" name="TXN_AMOUNT"
+						value="1">
+					</td>
+				</tr>
+                                <tr>
+					<td>6</td>
+					<td><label>MID</label></td>
+					<td><input title="MID" tabindex="10"
+						type="text" name="MID"
+						value='<%= config.MID %>'">
+					</td>
+				</tr>
+                                <tr>
+					<td>7</td>
+					<td><label>WEBSITE</label></td>
+					<td><input title="WEBSITE" tabindex="10"
+						type="text" name="WEBSITE"
+						value='<%= config.WEBSITE %>'>
+					</td>
+				</tr>
+                                <tr>
+					<td>8</td>
+					<td><label>REQUEST_TYPE</label></td>
+					<td><input title="REQUEST_TYPE" tabindex="10"
+						type="text" name="REQUEST_TYPE"
+						value="SUBSCRIBE">
+					</td>
+				</tr>
+				                    <tr>
+					<td>9</td>
+					<td><label>SUBS_SERVICE_ID</label></td>
+					<td><input title="SUBS_SERVICE_ID" tabindex="10"
+						type="text" name="SUBS_SERVICE_ID"
+						value="02040">
+					</td>
+				</tr>
+
+
+				                    <tr>
+					<td>10</td>
+					<td><label>SUBS_FREQUENCY</label></td>
+					<td><input title="SUBS_FREQUENCY" tabindex="10"
+						type="text" name="SUBS_FREQUENCY"
+						value="1">
+					</td>
+				</tr>
+
+				                    <tr>
+					<td>11</td>
+					<td><label>SUBS_FREQUENCY_UNIT</label></td>
+					<td><input title="SUBS_FREQUENCY_UNIT" tabindex="10"
+						type="text" name="SUBS_FREQUENCY_UNIT"
+						value="Day">
+					</td>
+				</tr>
+				           <tr>
+					<td>12</td>
+					<td><label>SUBS_ENABLE_RETRY</label></td>
+					<td><input title="SUBS_ENABLE_RETRY" tabindex="10"
+						type="text" name="SUBS_ENABLE_RETRY"
+						value="1">
+					</td>
+				</tr>
+				           <tr>
+					<td>13</td>
+					<td><label>SUBS_EXPIRY_DATE</label></td>
+					<td><input title="SUBS_EXPIRY_DATE" tabindex="10"
+						type="text" name="SUBS_EXPIRY_DATE"
+						value="2017-06-30">
+					</td>
+				</tr>
+				           <tr>
+					<td>14</td>
+					<td><label>SUBS_PPI_ONLY</label></td>
+					<td><input title="SUBS_PPI_ONLY" tabindex="10"
+						type="text" name="SUBS_PPI_ONLY"
+						value="Y">
+					</td>
+				</tr>
+				     <tr>
+					<td>15</td>
+					<td><label>SUBS_AMOUNT_TYPE</label></td>
+					<td><input title="SUBS_AMOUNT_TYPE" tabindex="10"
+						type="text" name="SUBS_AMOUNT_TYPE"
+						value="FIX">
+					</td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td></td>
+					<td><input value="CheckOut" type="submit" id ="user-submit" ></td>
+				</tr>
+			</tbody>
+		</table>
+		* - Mandatory Fields
+	</form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Check Status Your Transaction</title>
+<meta name="GENERATOR" content="Evrsoft First Page">
+</head>
+<body>
+
+<form method="post" action="/check_status">	
+
+<table>		
+<tr><td>			<b>Order Id : </b></td><td><input id="ORDER_ID" tabindex="1" maxlength="20" size="20" name= "ORDER_ID" autocomplete="off" value=""> </td></tr>
+<tr><td>			<b>MId : </b></td><td><input title="MID" tabindex="10" type="text" name="MID" value='<%= config.MID %>'"> </td></tr>
+<tr><td>
+						<b>Server: </b></td><td><input type='radio' name='SERVER' value='test' id="test" checked = 'checked' />Staging
+                        <input type='radio' name='SERVER' value='live' id="live"/>live</td></tr>
+</table>	<input class="occupy button button-primary submit" style="border-radius: 12px;background-color:#3FA7BA ;margin-left: 80px; height: 30px ;width: 120px" type="submit" value="Check Status">
+		</form>
+		<% 
+
+				if(flag == 'true')
+				{
+		        console.log(flag);
+		        console.log(reqcheck);
+				if(response.MID)
+				{
+					%> Request =  <span style="width:100%; word-wrap:break-word; display:inline-block;"><%= reqcheck %>
+					</span></br></br>
+					Response = <span style="width:100%; word-wrap:break-word; display:inline-block;"><%= jsonres %>
+					</span> 
+					</br></br>
+					Url = <span style="width:100%; word-wrap:break-word; display:inline-block;"><a target="_blank" href="<%= url %>"><%= url %></a>
+					</span><%
+				}
+				else
+				{
+				%>
+					</span></br></br>
+					Response = <span style="width:100%; word-wrap:break-word; display:inline-block;"><%= jsonres %>
+					</span> <%
+				}
+				}%>
+				</br></br>
+				* For Home : <a href="/home"><button type='button'>HOME</button></font></a>
+				
+		</body>
+</html>
+
+<a target="_blank" href=""></a>
