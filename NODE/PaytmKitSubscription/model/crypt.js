@@ -62,8 +62,7 @@ var crypt = {
       if (!err) {
         salt = buf.toString("base64");
       }
-      salt = "1234";
-      //salt=Math.floor(Math.random()*8999)+1000;
+      salt=Math.floor(Math.random()*8999)+1000;
       cb(err, salt);
     });
   },
