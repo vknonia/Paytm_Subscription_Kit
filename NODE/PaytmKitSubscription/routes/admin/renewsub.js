@@ -30,7 +30,7 @@ paramList["TXN_AMOUNT"] = '1';
           finalstring = finalstring+name+"="+result[name]+"&";
         }
          console.log(finalstring);
-         var SERVER = "https://pguat.paytm.com/oltp-web/processTransaction?"+finalstring
+         var SERVER = "https://securegw-stage.paytm.in/theia/processTransaction?"+finalstring
             request({
             url: SERVER, //URL to hit
             method: 'POST',
