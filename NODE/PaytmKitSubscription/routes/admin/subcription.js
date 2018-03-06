@@ -16,10 +16,10 @@ res.render('subcription.ejs',{'config' : config});
         var SERVER = 'test';
         if(SERVER == 'live')
         {
-          var url = config.PAYTM_PROD_URL + '/oltp-web/processTransaction'
+          var url = 'https://securegw.paytm.in/theia/processTransaction';
         }else
         {
-          var url = config.PAYTM_STAG_URL + '/oltp-web/processTransaction'
+          var url = 'https://securegw-stage.paytm.in/theia/processTransaction';
         }
         
         console.log(config.PAYTM_STAG_URL);
