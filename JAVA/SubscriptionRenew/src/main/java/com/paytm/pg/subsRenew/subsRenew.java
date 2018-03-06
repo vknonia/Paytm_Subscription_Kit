@@ -13,8 +13,8 @@ import java.util.TreeMap;
 import com.paytm.pg.merchant.CheckSumServiceHelper;
 
 public class subsRenew {
-	public static String paytmPGStagingUrl = "https://pguat.paytm.in/oltp-web/processTransaction";
-	public static String paytmPGProdUrl = "https://secure.paytm.in/oltp-web/processTransaction";
+	public static String paytmPGStagingUrl = "https://securegw-stage.paytm.in/theia/processTransaction";
+	public static String paytmPGProdUrl = "https://securegw.paytm.in/theia/processTransaction";
 	public static String paytmMerchantID = "";//"";
 	public static String paytmMerchantKey = "";//"xxxxxxxxxxxxxxxx";
 	public static String promoCode = "";
